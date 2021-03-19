@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "id": "liquidbounce",
+  "id": "vssclient",
   "version": "${version}",
-  "name": "LiquidBounce",
+  "name": "VSSClient",
   "description": "A free mixin-based injection hacked-client",
   "authors": ["CCBlueX"],
   "contact": {

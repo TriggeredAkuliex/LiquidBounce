@@ -129,7 +129,7 @@ public abstract class MixinMinecraftClient {
     @ModifyArgs(method = "<init>", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/util/Window;setIcon(Ljava/io/InputStream;Ljava/io/InputStream;)V"))
     private void setupIcon(final Args args) {
         try {
-            LiquidBounce.INSTANCE.getLogger().debug("Loading client icons");
+            LiquidBounce.INSTANCE.getLogger().debug("Chargement des icones du CLIENT");
 
             // Load client icons
             final InputStream stream32 = getResourcePackDownloader().getPack().open(ResourceType.CLIENT_RESOURCES,
@@ -139,7 +139,7 @@ public abstract class MixinMinecraftClient {
 
             args.setAll(stream32, stream64);
         } catch (final IOException e) {
-            LiquidBounce.INSTANCE.getLogger().error("Unable to load client icons.", e);
+            LiquidBounce.INSTANCE.getLogger().error("Impossible de charger les icones du CLIENT.", e);
 
             // => Fallback to minecraft icons
         }
